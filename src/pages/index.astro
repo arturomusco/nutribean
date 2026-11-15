@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Home | NutriBean+">
+  <section class="hero-section">
+    <img src="/header.jpg" alt="Studenti in laboratorio di chimica" fetchpriority="high" decoding="async" />
+  </section>
+
+  <section class="intro-banner">
+    <div class="intro-banner-inner">
+      <p class="subtitle">
+        <strong>Chickpea and soy: new protein and antioxidant flours<br />
+        for an environmentally friendly food system</strong>
+      </p>
+
+      <div class="intro-divider" aria-hidden="true"></div>
+
+      <div class="authors-row">
+        <span class="author-item">Pietro Ciceri</span>
+        <span class="author-sep" aria-hidden="true">&bull;</span>
+        <span class="author-item">Davide Lolla</span>
+        <span class="author-sep" aria-hidden="true">&bull;</span>
+        <span class="author-item">Noemi Marianna Pia</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-split-section">
+    <div class="project-text-col">
+      <h2>A CHALLENGING<br />PROJECT</h2>
+      <p class="project-description">
+        Grain legumes have agronomic, nutritional and environmental characteristics that reflect the points of the "Farm to Fork" Strategy. Four varieties of chickpeas and four varieties of soy were characterized by evaluating production, physical, nutraceutical and nutritional parameters. The project highlights the high potential of soybeans and chickpeas as raw materials suitable for a food use based on vegetable proteins and underlines their possible nutraceutical use, enhancing the eco-sustainable attributes. With a view to a circular economy, the waste of a variety of soybeans were examined, which proved to be a new source for vegetable flours for their protein intake and antioxidant power.
+      </p>
+      <a href="/project" class="btn-discover">DISCOVER MORE</a>
+    </div>
+
+    <div class="project-image-col">
+      <img src="/home-1.jpg" alt="Ricercatore con provette in laboratorio" loading="lazy" decoding="async" />
+    </div>
+  </section>
+
+  <section class="minister-section">
+    <div class="carousel-box">
+      <img src="home-2.jpg" alt="Premiazione con il Ministro dell'Istruzione" loading="lazy" decoding="async" />
+      <div class="carousel-overlay">
+        <h3>the Italian<br />education minister<br />and us</h3>
+      </div>
+      <button class="carousel-arrow prev" aria-label="Previous slide">&#10094;</button>
+      <button class="carousel-arrow next" aria-label="Next slide">&#10095;</button>
+    </div>
+  </section>
+</Layout>

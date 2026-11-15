@@ -1,0 +1,50 @@
+---
+const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/project", label: "Project" },
+  { href: "/analysis", label: "Analysis & Results" },
+  { href: "/aboutus", label: "About Us" },
+  { href: "/fiere", label: "Fiere" },
+];
+---
+
+<header class="site-header">
+  <div class="header-top-bar">
+    <a href="/" class="logo-container">
+      <img src="/logo.jpg" alt="NutriBean+ Logo" class="leaf-icon" />
+      <span class="brand-name-header">NUTRIBEAN+</span>
+      <img src="/logo.jpg" alt="NutriBean+ Logo" class="leaf-icon right" />
+    </a>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <nav class="main-nav" id="mainNav">
+    <ul>
+      {navItems.map((item) => (
+        <li>
+          <a href={item.href} class={pathname === item.href ? "active" : ""}>
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const menuBtn = document.getElementById("mobileMenuBtn");
+  const mainNav = document.getElementById("mainNav");
+
+  menuBtn?.addEventListener("click", () => {
+    const isOpen = mainNav?.classList.toggle("open");
+    menuBtn.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(Boolean(isOpen)));
+  });
+</script>
