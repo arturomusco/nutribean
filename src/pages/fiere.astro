@@ -3,7 +3,146 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Fiere | NutriBean+">
-  <div class="page-container empty-page-title">
-    <h1>Fiere</h1>
+  <div class="page-container about-page">
+    
+    <!-- Tab identiche a About Us -->
+    <nav class="author-tabs">
+      <a href="#italia" class="author-tab-btn">I Giovani e le Scienze</a>
+      <a href="#europa" class="author-tab-btn">EUCYS Bruxelles</a>
+      <a href="#mondo" class="author-tab-btn">Fiera Internazionale</a>
+    </nav>
+
+    <!-- ================= SEZIONE 1: ITALIA ================= -->
+    <section id="italia" class="fiere-section">
+      <span class="fiere-eyebrow">dove tutto è partito...</span>
+      
+      <div class="fiere-split">
+        <div class="fiere-text-col">
+          <h2 class="fiere-title">I Giovani e le Scienze - Milano</h2>
+          <p class="fiere-description">
+            La nostra avventura è iniziata a Milano, partecipando al concorso nazionale organizzato dalla FAST. 
+            Qui abbiamo presentato per la prima volta i risultati delle nostre analisi su ceci e soia, 
+            conquistando il primo premio e la possibilità di rappresentare l'Italia in Europa.
+          </p>
+        </div>
+
+        <div class="fiere-carousel-col">
+          <div class="mini-carousel" data-carousel>
+            <div class="mini-slide active">
+              <img src="/fiera-milano-1.jpg" alt="Stand Milano" loading="lazy" decoding="async" />
+              <p class="mini-caption">Il nostro stand a Milano</p>
+            </div>
+            <div class="mini-slide">
+              <img src="/fiera-milano-2.jpg" alt="Premiazione Milano" loading="lazy" decoding="async" />
+              <p class="mini-caption">La cerimonia di premiazione finale</p>
+            </div>
+            <div class="mini-slide">
+              <img src="/fiera-milano-3.jpg" alt="Team Milano" loading="lazy" decoding="async" />
+              <p class="mini-caption">Con la giuria scientifica FAST</p>
+            </div>
+            <button class="mini-arrow prev" aria-label="Precedente">&#10094;</button>
+            <button class="mini-arrow next" aria-label="Successiva">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ================= SEZIONE 2: EUROPA ================= -->
+    <section id="europa" class="fiere-section">
+      <span class="fiere-eyebrow">in europa...</span>
+      
+      <div class="fiere-split">
+        <div class="fiere-text-col">
+          <h2 class="fiere-title">EUCYS - Bruxelles</h2>
+          <p class="fiere-description">
+            Abbiamo portato NutriBean+ sul palcoscenico europeo alla 34ª edizione dello European Union Contest 
+            for Young Scientists a Bruxelles, confrontandoci con giovani ricercatori provenienti da oltre trenta 
+            paesi e condividendo la nostra idea di economia circolare.
+          </p>
+        </div>
+
+        <div class="fiere-carousel-col">
+          <div class="mini-carousel" data-carousel>
+            <div class="mini-slide active">
+              <img src="/fiera-bruxelles-1.jpg" alt="Stand Bruxelles" loading="lazy" decoding="async" />
+              <p class="mini-caption">Esposizione europea a Bruxelles</p>
+            </div>
+            <div class="mini-slide">
+              <img src="/fiera-bruxelles-2.jpg" alt="Presentazione EUCYS" loading="lazy" decoding="async" />
+              <p class="mini-caption">Presentazione dei campioni di farina</p>
+            </div>
+            <div class="mini-slide">
+              <img src="/fiera-bruxelles-3.jpg" alt="Team EUCYS" loading="lazy" decoding="async" />
+              <p class="mini-caption">Insieme ai finalisti internazionali</p>
+            </div>
+            <button class="mini-arrow prev" aria-label="Precedente">&#10094;</button>
+            <button class="mini-arrow next" aria-label="Successiva">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ================= SEZIONE 3: MONDO ================= -->
+    <section id="mondo" class="fiere-section">
+      <span class="fiere-eyebrow">... e poi dall'altra parte del mondo</span>
+      
+      <div class="fiere-split">
+        <div class="fiere-text-col">
+          <h2 class="fiere-title">Esposizione Scientifica Internazionale</h2>
+          <p class="fiere-description">
+            Un traguardo straordinario che ci ha permesso di varcare i confini europei per presentare il valore 
+            nutraceutico ed ecosostenibile delle farine di legumi e dei baccelli di soia a una platea globale 
+            di esperti, istituzioni e appassionati di scienza.
+          </p>
+        </div>
+
+        <div class="fiere-carousel-col">
+          <div class="mini-carousel" data-carousel>
+            <div class="mini-slide active">
+              <img src="/fiera-mondo-1.jpg" alt="Fiera Internazionale 1" loading="lazy" decoding="async" />
+              <p class="mini-caption">Arrivo alla fiera internazionale</p>
+            </div>
+            <div class="mini-slide">
+              <img src="/fiera-mondo-2.jpg" alt="Fiera Internazionale 2" loading="lazy" decoding="async" />
+              <p class="mini-caption">Spiegazione del progetto ai visitatori</p>
+            </div>
+            <div class="mini-slide">
+              <img src="/fiera-mondo-3.jpg" alt="Fiera Internazionale 3" loading="lazy" decoding="async" />
+              <p class="mini-caption">Il team sul palco internazionale</p>
+            </div>
+            <button class="mini-arrow prev" aria-label="Precedente">&#10094;</button>
+            <button class="mini-arrow next" aria-label="Successiva">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
+
+  <script>
+    document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+      const slides = carousel.querySelectorAll(".mini-slide");
+      const prevBtn = carousel.querySelector(".prev");
+      const nextBtn = carousel.querySelector(".next");
+      let current = 0;
+
+      const showSlide = (index: number) => {
+        slides.forEach((s, i) => s.classList.toggle("active", i === index));
+      };
+
+      prevBtn?.addEventListener("click", () => {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      });
+
+      nextBtn?.addEventListener("click", () => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      });
+    });
+  </script>
 </Layout>

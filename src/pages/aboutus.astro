@@ -3,42 +3,150 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About Us | NutriBean+">
-  <div class="page-container">
-    <section class="intro-card-white">
-      <h1>About Us</h1>
-      <p>
-        We are three young researchers passionate about chemistry, sustainability, and circular economy. Through the <strong>NutriBean+</strong> project, we investigated how local varieties of chickpeas, soybeans, and agricultural by-products (soybean pods) can become innovative, high-protein, and antioxidant-rich flours for a healthier and more sustainable food system.
+  <div class="page-container about-page">
+    
+    <!-- Tab di navigazione rapida in alto -->
+    <nav class="author-tabs">
+      <a href="#davide" class="author-tab-btn">Davide Lolla</a>
+      <a href="#noemi" class="author-tab-btn">Noemi Marianna Pia</a>
+      <a href="#pietro" class="author-tab-btn">Pietro Ciceri</a>
+    </nav>
+
+    <!-- ================= DAVIDE LOLLA ================= -->
+    <section id="davide" class="author-section">
+      <h2 class="author-main-title">Davide Lolla</h2>
+      <p class="author-intro">
+        Co-autore e ricercatore del progetto NutriBean+, focalizzato sullo studio delle proprietà nutraceutiche, 
+        sulla valutazione antiossidante degli estratti e sulle potenziali applicazioni nell'ambito della 
+        economia circolare e della valorizzazione dei baccelli di soia come risorsa innovativa.
       </p>
+
+      <div class="timeline-container">
+        <!-- Anno 2023 -->
+        <div class="timeline-row">
+          <div class="timeline-left">
+            <span class="timeline-year">2023</span>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <p class="timeline-text">
+              Partecipazione al concorso nazionale "I Giovani e le Scienze" a Milano con conseguimento del Primo Premio assoluto e qualificazione per rappresentare l'Italia al concorso europeo EUCYS a Bruxelles.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <img src="/davide-2023.jpg" alt="Davide Lolla 2023" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <!-- Anno 2026 -->
+        <div class="timeline-row">
+          <div class="timeline-left">
+            <span class="timeline-year">2026</span>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <p class="timeline-text">
+              Proseguimento degli studi e sviluppo delle competenze scientifiche avanzate, consolidando l'esperienza pratica maturata in laboratorio e la diffusione dei risultati della ricerca ecosostenibile.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <img src="/davide-2026.jpg" alt="Davide Lolla 2026" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="team-grid">
-      <div class="team-card">
-        <div class="team-avatar">PC</div>
-        <h3>Pietro Ciceri</h3>
-        <p class="team-role">Co-Author &amp; Researcher</p>
-        <p>Focused on chemical characterization, physical parameters, and laboratory extraction protocols.</p>
-      </div>
+    <hr class="section-divider" />
 
-      <div class="team-card">
-        <div class="team-avatar">DL</div>
-        <h3>Davide Lolla</h3>
-        <p class="team-role">Co-Author &amp; Researcher</p>
-        <p>Focused on nutraceutical evaluation, antioxidant activity, and circular economy applications.</p>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar">NM</div>
-        <h3>Noemi Marianna Pia</h3>
-        <p class="team-role">Co-Author &amp; Researcher</p>
-        <p>Focused on nutritional profiling, agronomic screening, and data analysis of legume varieties.</p>
-      </div>
-    </section>
-
-    <section class="school-box">
-      <h2>Our School &amp; Journey</h2>
-      <p>
-        Developed at <strong>Istituto Tecnico Tecnologico "Ettore Majorana"</strong>, the project was awarded First Prize at <em>"I Giovani e le Scienze 2023"</em> (FAST) in Milan, earning the opportunity to represent Italy at the 34th European Union Contest for Young Scientists (EUCYS) in Brussels.[cite: 3]
+    <!-- ================= NOEMI PIA ================= -->
+    <section id="noemi" class="author-section">
+      <h2 class="author-main-title">Noemi Marianna Pia</h2>
+      <p class="author-intro">
+        Co-autrice e ricercatrice dedicata all'analisi della profilazione nutrizionale, allo screening agronomico 
+        delle diverse varietà di legumi e all'elaborazione statistica dei dati di laboratorio per la creazione 
+        di nuove formulazioni alimentari a basso impatto ambientale.
       </p>
+
+      <div class="timeline-container">
+        <!-- Anno 2023 -->
+        <div class="timeline-row">
+          <div class="timeline-left">
+            <span class="timeline-year">2023</span>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <p class="timeline-text">
+              Vittoria del premio speciale assegnato dalla Società Chimica Italiana e riconoscimento per l'eccellenza scientifica e l'uso innovativo della scienza per lo sviluppo sostenibile.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <img src="/noemi-2023.jpg" alt="Noemi Pia 2023" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <!-- Anno 2026 -->
+        <div class="timeline-row">
+          <div class="timeline-left">
+            <span class="timeline-year">2026</span>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <p class="timeline-text">
+              Ampliamento delle ricerche nel settore biotecnologico e applicazione pratica dei principi di economia circolare appresi durante il percorso scolastico e scientifico.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <img src="/noemi-2026.jpg" alt="Noemi Pia 2026" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
     </section>
+
+    <hr class="section-divider" />
+
+    <!-- ================= PIETRO CICERI ================= -->
+    <section id="pietro" class="author-section">
+      <h2 class="author-main-title">Pietro Ciceri</h2>
+      <p class="author-intro">
+        Co-autore e ricercatore focalizzato sulla caratterizzazione chimica di base, sulla definizione dei 
+        parametri fisici come le capacità di assorbimento di acqua e olio, e sulla messa a punto dei protocolli 
+        sperimentali di estrazione per le nuove farine proteiche.
+      </p>
+
+      <div class="timeline-container">
+        <!-- Anno 2023 -->
+        <div class="timeline-row">
+          <div class="timeline-left">
+            <span class="timeline-year">2023</span>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <p class="timeline-text">
+              Presentazione ufficiale del progetto NutriBean+ e ottenimento del prestigioso premio USAID per soluzioni tecnologiche e ambientali innovative in ambito internazionale.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <img src="/pietro-2023.jpg" alt="Pietro Ciceri 2023" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <!-- Anno 2026 -->
+        <div class="timeline-row">
+          <div class="timeline-left">
+            <span class="timeline-year">2026</span>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <p class="timeline-text">
+              Consolidamento del percorso accademico e professionale nel campo chimico-tecnologico, mantenendo vivo l'impegno verso la ricerca di sistemi alimentari ecocompatibili.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <img src="/pietro-2026.jpg" alt="Pietro Ciceri 2026" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </Layout>
