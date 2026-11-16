@@ -3,66 +3,78 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Analysis & Results | NutriBean+">
-  <div class="page-container">
+  <main class="page-container">
+
+    <!-- ================= CONCLUSIONS ================= -->
     <section class="conclusions-header">
+
       <h1>CONCLUSIONS</h1>
-      <p class="conclusions-lead">With the conclusion of the project and its analysis, we have highlighted the following results:[cite: 3]</p>
+
+      <p class="conclusions-lead">
+        With the conclusion of the project and its analysis, we have
+        highlighted the following results:
+      </p>
 
       <ul class="conclusions-list">
-        <li>&bull; Enhancement of vegetable protein sources, in particular from soy and chickpeas, as an alternative to those of animal origin.[cite: 3]</li>
-        <li>&bull; Low Water &amp; Carbon Footprint.[cite: 3]</li>
-        <li>&bull; Negligible chemical treatments compared to other crops.[cite: 3]</li>
-        <li>&bull; The contents of the soybean varieties of W.A.C., O.A.C., total polyphenols, antioxidant activity, proteins and lipids are higher than those of the chickpeas.[cite: 3]</li>
-        <li>&bull; The waste has a good protein content (27.66%), the highest content of W.A.C., O.A.C., total polyphenols, antioxidant activity and negligible concentration of lipids (0.32%).[cite: 3]</li>
+        <li>
+          Enhancement of vegetable protein sources, in particular from
+          soy and chickpeas, as an alternative to those of animal origin.
+        </li>
+
+        <li>
+          Low Water &amp; Carbon Footprint.
+        </li>
+
+        <li>
+          Negligible chemical treatments compared to other crops.
+        </li>
+
+        <li>
+          The contents of the soybean varieties of W.A.C., O.A.C.,
+          total polyphenols, antioxidant activity, proteins and lipids
+          are higher than those of the chickpeas.
+        </li>
+
+        <li>
+          The waste has a good protein content (27.66%), the highest
+          content of W.A.C., O.A.C., total polyphenols, antioxidant
+          activity and negligible concentration of lipids (0.32%).
+        </li>
       </ul>
 
       <p class="conclusions-summary">
-        To sum up, we discovered the high potential hidden inside these pods, demonstrating how even wastes can be useful, thus encouraging an environmentally-friendly economy.[cite: 3]
+        To sum up, we discovered the high potential hidden inside these
+        pods, demonstrating how even wastes can be useful, thus
+        encouraging an environmentally-friendly economy.
       </p>
+
     </section>
 
-    <section class="video-showcase">
-      <p class="video-prompt">Have a look at our video!! &#8628;[cite: 3]</p>
+
+    <!-- ================= PROJECT VIDEO ================= -->
+    <section
+      class="video-showcase"
+      aria-label="NutriBean+ presentation video"
+    >
+
       <div class="video-box">
-        <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1000&q=80" alt="Anteprima video NutriBean+" loading="lazy" decoding="async" />
-        <button class="video-play-btn" aria-label="Play video">&#9654;</button>
+
+        <video
+          controls
+          preload="none"
+          playsinline
+          poster="/video-cover.jpg"
+          aria-label="NutriBean+ presentation video"
+        >
+          <source src="/video.mp4" type="video/mp4" />
+
+          Your browser does not support HTML video.
+        </video>
+
       </div>
+
     </section>
-  </div>
 
-  <section class="contest-banner">
-    <img src="/logo.jpg" alt="NutriBean+ Logo" class="leaf-icon" />
-
-    <div class="contest-badge">
-      <span class="contest-year">2023[cite: 3]</span>
-      <span class="contest-name">I GIOVANI E LE SCIENZE[cite: 3]</span>
-    </div>
-
-    <img src="/logo.jpg" alt="NutriBean+ Logo" class="leaf-icon right" />
-  </section>
-
-  <section class="experience-section">
-    <h2>WHAT KIND OF<br />EXPERIENCE WE MADE[cite: 3]</h2>
-    <p>
-      We participated at the Italian national contest "I giovani e le scienze" organised by the FAST association, for the selection of the 34&deg; European Contest for Young Scientist (EUCYS) this year in Brussels.[cite: 3]
-    </p>
-    <p>
-      The selection took part in Milan during the period from the 18th to the 20th of march 2023.<br />
-      It was such a beautiful experience![cite: 3]
-    </p>
-    <p>
-      We knew a lot of new people from all over the world, and everyone there had a lot of talent and passion in the scientific field, as well.[cite: 3]
-    </p>
-    <p>
-      At the end of this fantastic event we received a big surprise: WE WON! together with two other groups the first prize: the possibility to represent Italy at the 34th edition of EUCYS.<br />
-      With our experiment we won also the first prize for "the better project in the chemistry field" by "Societ&agrave; Chimica Italiana" and the prize for "scientific excellence and using science innovatively to create a potential solution to international development challenges" by the United State of Agency for International Development (USAID).[cite: 3]
-    </p>
-    <p class="experience-closing">
-      Now we are looking forward to go to Brussels and have a lot of fun.[cite: 3]
-    </p>
-  </section>
-
-  <div class="experience-photo-full">
-    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1400&q=80" alt="Il team NutriBean+ allo stand di I Giovani e le Scienze" loading="lazy" decoding="async" />
-  </div>
+  </main>
 </Layout>
+
